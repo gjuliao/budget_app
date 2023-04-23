@@ -4,6 +4,7 @@ class EntitiesController < ApplicationController
   # GET /entities or /entities.json
   def index
     @entities = Entity.all
+    @group = Group.find(params[:group_id])
   end
 
   # GET /entities/1 or /entities/1.json
@@ -25,7 +26,7 @@ class EntitiesController < ApplicationController
 
     respond_to do |format|
       if @entity.save
-        format.html { redirect_to user_group_path(current_user, @entity), notice: 'Entity was successfully created.' }
+        format.html { redirect_to user_group_entities_path(current_user, @group), notice: 'Entity was successfully created.' }
         format.json { render :show, status: :created, location: @entity }
       else
         format.html { render :new, status: :unprocessable_entity }

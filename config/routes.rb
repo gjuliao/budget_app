@@ -8,5 +8,5 @@ Rails.application.routes.draw do
     end
   end
 
-  root "groups#index"
+  root "users#index"
 end

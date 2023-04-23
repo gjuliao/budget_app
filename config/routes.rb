@@ -3,11 +3,10 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users do
-    resources :entities do
-      resources :groups
+    resources :groups do
+      resources :entities
     end
   end
 
-
-  root "entities#index"
+  root "groups#index"
 end

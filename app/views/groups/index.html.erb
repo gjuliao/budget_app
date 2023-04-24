@@ -2,13 +2,14 @@
 
 <h1>Categories</h1>
 
+<%= link_to "Add Category", new_group_path(current_user) %>
+
 <div id="groups">
   <% @groups.each do |group| %>
     <%= render group %>
     <p>
-      <%= link_to "Show this group", user_group_path(current_user, group) %>
+      <%= link_to "Show this group", group_path(group) %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "Add Category", new_user_group_path(current_user) %>

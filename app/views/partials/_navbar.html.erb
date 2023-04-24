@@ -14,7 +14,7 @@
       <ul class="navbar-nav w-100 navigation">
         <% if user_signed_in? %>
           <li class="nav-item">
-            <%= button_to 'Categories', user_groups_path(current_user), method: :get, class:"nav-link active" %>
+            <%= button_to 'Categories', groups_path(current_user), method: :get, class:"nav-link active" %>
           </li>
       </ul>
     </div>

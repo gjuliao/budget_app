@@ -1,22 +1,8 @@
 <div id="<%= dom_id group %>">
-  <p>
-    <strong>Name:</strong>
-    <%= group.name %>
-  </p>
-
-  <p>
-    <strong>Icon:</strong>
-    <%= group.icon %>
-  </p>
-
-  <p>
-    <strong>User:</strong>
-    <%= group.user_id %>
-  </p>
-
-    <p>
-    <strong>Add Transaction:</strong>
-    <%= link_to 'Add Transaction', new_entity_path(group) %>
-  </p>
-
+  <div class="w-100 mt-4 p-2">
+    <div class="d-flex group p-4">
+      <%= image_tag("person-circle.svg", width: "10%")  %>
+      <p class="my-auto mx-5"><%= group.name %>, <%= group.user_id %></p>
+    </div>
+  </div>
 </div>

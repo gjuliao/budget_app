@@ -38,6 +38,9 @@ gem 'cancancan'
 # Bootsrap
 gem 'bootstrap'
 
+# Bootsrap icons
+gem 'bootstrap-icons-helper'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

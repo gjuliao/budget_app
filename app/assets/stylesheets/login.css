@@ -1,0 +1,14 @@
+.login_nav {
+  margin-top: -20%;
+}
+
+.login {
+  padding-left: 30% !important;
+}
+
+.btn_login {
+  border: none;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+}

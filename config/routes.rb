@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'static_pages/home'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   devise_for :users
 
@@ -8,5 +9,9 @@ Rails.application.routes.draw do
     end
   end
 
-  root "users#index"
+  authenticated :user do
+   root 'groups#index', as: :authenticated_root
+  end
+
+  root 'static_pages#home'
 end

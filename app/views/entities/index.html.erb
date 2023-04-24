@@ -1,12 +1,18 @@
-<h1>Entities</h1>
+<head>
+  <%= stylesheet_link_tag 'entities' %>
+</head>
 
-<div id="entities">
-  <% @entities.each do |entity| %>
-    <%= render entity %>
-    <p>
-      <%= link_to "Show this entity", user_group_entities_path(current_user, @group) %>
-    </p>
-  <% end %>
+<div class="entities">
+  <h1 class="text-light text-center">Transactions</h1>
+
+  <div id="entities">
+    <% @entities.each do |entity| %>
+      <%= render entity %>
+      <p>
+        <% link_to "Show this entity", user_group_entities_path(current_user, @group) %>
+      </p>
+    <% end %>
+  </div>
+
+  <%= link_to "New entity", new_user_group_entity_path(current_user, @group) %>
 </div>
-
-<%= link_to "New entity", new_user_group_entity_path(current_user, @group) %>

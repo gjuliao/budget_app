@@ -1,22 +1,11 @@
-<div id="<%= dom_id entity %>">
-  <p>
-    <strong>Name:</strong>
-    <%= entity.name %>
-  </p>
-
-  <p>
-    <strong>Amount:</strong>
-    <%= entity.amount %>
-  </p>
-
-  <p>
-    <strong>User:</strong>
-    <%= entity.user_id %>
-  </p>
-
-  <p>
-    <strong>Group:</strong>
-    <%= entity.group_id %>
-  </p>
-
+<div class="mt-4" id="<%= dom_id entity %>">
+  <div class="d-flex justify-content-between entity_card p-4 m-4">
+    <p>
+      <strong>Category</strong>
+      <%= entity.name %>
+    </p>
+    <div>
+      <strong><%= entity.amount %></strong>
+    </div>
+  </div>
 </div>

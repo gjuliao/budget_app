@@ -1,0 +1,19 @@
+.entities {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .entities h1 {
+    margin-top: -30%;
+    margin-bottom: 15%;
+  }
+
+  #entities {
+    margin-top: -125%;
+  }
+
+  .entity_card {
+    border: 1px solid gray;
+  }

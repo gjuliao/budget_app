@@ -2,13 +2,14 @@
   <%= stylesheet_link_tag 'navbar' %>
 </head>
 
-<nav class="bg-primary">
+<nav class="bg-primary navbar navbar-expand-md">
   <div class="container-fluid">
-     <div class="menu-toggle">
-      <%= image_tag("list.svg", width:"10%")  %>
-    </div>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav w-100 navigation">
+    <%= button_tag type: 'button', class: 'navbar-toggler', data: { toggle: 'collapse', target: '#collapsibleNavbar' } do %>
+      <span class="navbar-toggler-icon"></span>
+    <% end %>
+
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
         <% if user_signed_in? %>
           <li class="nav-item">
             <%= button_to 'Categories', user_groups_path(current_user), method: :get, class:"nav-link active" %>
@@ -23,5 +24,6 @@
        <% end %>
       </ul>
     </div>
+
   </div>
 </nav>

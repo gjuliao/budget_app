@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  
-  
-  resources :groups
-    resources :entities
   devise_for :users
+  
+  resources :users 
+    resources :groups
+      resources :entities
   
 
   authenticated :user do

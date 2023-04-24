@@ -1,15 +1,15 @@
-<p style="color: green"><%= notice %></p>
+<div style="width:100%">
+  <h1>Categories</h1>
 
-<h1>Categories</h1>
+  <%= link_to "Add Category", new_group_path(current_user) %>
 
-<%= link_to "Add Category", new_group_path(current_user) %>
-
-<div id="groups">
-  <% @groups.each do |group| %>
-    <%= render group %>
-    <p>
-      <%= link_to "Show this group", group_path(group) %>
-    </p>
-  <% end %>
+  <div id="groups">
+    <% @groups.each do |group| %>
+      <%= render group %>
+      <p>
+        <%= link_to "Show this group", group_path(group) %>
+      </p>
+    <% end %>
+  </div>
 </div>
 

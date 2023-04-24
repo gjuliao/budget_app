@@ -1,0 +1,46 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .logo {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .menu-toggle {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .navigation {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #f2f2f2;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: none;
+  }
+  
+  .navigation li {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .navigation a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  /* Show the navigation menu when the menu toggle is clicked */
+  .menu-toggle:focus + .navigation, .navigation:focus-within {
+    display: block;
+  }
+  

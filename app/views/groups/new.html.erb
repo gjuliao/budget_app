@@ -1,9 +1,17 @@
-<h1>New group</h1>
+<head>
+  <%= stylesheet_link_tag 'categories' %>
+</head>
 
-<%= render "form", group: @group %>
+<div class="categories" style="width:100%">
+  <h1 class="text-center text-light">CATEGORIES</h1>
 
-<br>
+  <h3 class="mx-5">Add New Category</h3>
 
-<div>
-  <%= link_to "Back to groups", user_groups_path %>
+  <%= render "form", group: @group %>
+
+  <br>
+
+  <div>
+    <%= link_to "Back to groups", user_groups_path %>
+  </div>
 </div>

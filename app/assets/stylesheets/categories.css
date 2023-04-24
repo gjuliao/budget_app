@@ -10,10 +10,23 @@
   margin-bottom: 15%;
 }
 
+.categories h3 {
+  margin-top: -45%;
+}
+
 .group {
   border: 1px solid gray;
 }
 
 #groups {
   margin-top: -37%;
+}
+
+.create-group {
+  margin-top: -37%; ;
+}
+
+.btn-category {
+  border: none;
+
 }

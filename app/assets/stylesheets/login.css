@@ -17,3 +17,9 @@
   position: fixed;
   top: 5%;
 }
+
+.devise_login_session_btn {
+  position: fixed;
+  top: 5%;
+  right: 2%;
+}

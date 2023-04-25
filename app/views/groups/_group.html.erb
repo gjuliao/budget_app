@@ -3,8 +3,8 @@
     <div class="d-flex group p-4">
       <%= image_tag("person-circle.svg", width: "10%")  %>
       <p class="my-auto mx-5"><%= group.name %>, <%= group.user_id %></p>
-      <%= @total_amount %>
-        
+      <% sum = group.entities.sum(&:amount) %>
+       <p>  <%= sum %> </p>
     </div>
   </div>
 </div>

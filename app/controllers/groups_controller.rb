@@ -8,7 +8,6 @@ class GroupsController < ApplicationController
     @total_amount = Entity.joins(group: :user).where(
       group: { user_id: current_user.id }
     ).where(user_id: current_user.id).distinct.sum(:amount)
-    @group_sum = Group.left_joins(:entity).distinct.group('group.id').sum('entities.amount')
   end
 
   # GET /groups/1 or /groups/1.json

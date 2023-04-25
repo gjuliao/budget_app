@@ -4,10 +4,7 @@
       <%= image_tag("person-circle.svg", width: "10%")  %>
       <p class="my-auto mx-5"><%= group.name %>, <%= group.user_id %></p>
       <% group.entities.each do |entity| %>
-         <% entity.amount do |el| %>
-            sum += el
-      <p>Total</p>
-         <%end %>
+         <%= entity.amount %>
       <% end %>
     </div>
   </div>

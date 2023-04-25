@@ -4,10 +4,12 @@
 
 .menu {
   position: absolute;
-  top: 50.5px;
+  top: 35.5px;
   left: -19px;
   padding: 20px;
   display: none;
+  z-index: 3;
+  width: 60%;
 }
 
 .menu ul {
@@ -28,4 +30,18 @@
 
 .active {
   display: block;
+}
+
+.page_title {
+  position: fixed;
+  top: 0;
+  margin: auto;
+  width: 100%;
+  margin: auto;
+}
+
+.page_title h3 {
+  text-align: center;
+  padding-top: 5%;
+  padding-right: 10%;
 }

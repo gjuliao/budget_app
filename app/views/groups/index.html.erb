@@ -3,9 +3,6 @@
 </head>
 
 <div class="categories" style="width:100%">
-  <h1 class="text-center text-dark">CATEGORIES</h1>
-
-
   <div id="groups">
     <% @groups.each do |group| %>
       <%= link_to(user_group_entities_path(current_user, group), class:"text-decoration-none text-reset") do %>

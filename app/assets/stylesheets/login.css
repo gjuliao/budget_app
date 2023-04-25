@@ -12,3 +12,8 @@
   text-decoration: none;
   display: inline-block;
 }
+
+.devise_register_submit {
+  position: fixed;
+  top: 5%;
+}

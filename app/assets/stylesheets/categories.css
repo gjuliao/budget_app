@@ -5,31 +5,10 @@
   justify-content: space-between;
 }
 
-.categories h1 {
-  margin-top: -28%;
-  margin-bottom: 15%;
-  z-index: 1;
-  max-width: 20%;
-  padding-left: 30%;
-}
-
-.categories h3 {
-  margin-top: -45%;
-}
-
 .group {
   border: 1px solid gray;
 }
 
-#groups {
-  margin-top: -37%;
-}
-
-.create-group {
-  margin-top: -37%; ;
-}
-
 .btn-category {
   border: none;
-
 }

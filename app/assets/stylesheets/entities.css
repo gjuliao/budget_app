@@ -5,7 +5,16 @@
     justify-content: space-between;
   }
 
+  .entity_card_total {
+    border-bottom: 1px solid lightgray;
+    position: fixed;
+    top: 8%;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
 
   .entity_card {
-    border: 1px solid gray;
+    border: 1px solid lightgray;
   }

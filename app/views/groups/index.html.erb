@@ -3,6 +3,7 @@
 </head>
 
 <div class="categories" style="width:100%">
+  <div><%= @total_amount %></div>
   <div id="groups">
     <% @groups.each do |group| %>
       <%= link_to(user_group_entities_path(current_user, group), class:"text-decoration-none text-reset") do %>

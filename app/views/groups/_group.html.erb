@@ -3,9 +3,8 @@
     <div class="d-flex group p-4">
       <%= image_tag("person-circle.svg", width: "10%")  %>
       <p class="my-auto mx-5"><%= group.name %>, <%= group.user_id %></p>
-      <% group.entities.each do |entity| %>
-         <%= entity.amount %>
-      <% end %>
+      <%= @total_amount %>
+        
     </div>
   </div>
 </div>

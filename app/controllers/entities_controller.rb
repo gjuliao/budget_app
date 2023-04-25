@@ -5,6 +5,7 @@ class EntitiesController < ApplicationController
   def index
     @group = Group.find(params[:group_id])
     @entities = Entity.where(group_id: @group, user_id: current_user.id)
+    @entities_sum = Entity.where(group_id: @group, user_id: current_user.id).sum(:amount)
   end
 
   # GET /entities/1 or /entities/1.json

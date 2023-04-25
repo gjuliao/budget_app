@@ -3,31 +3,30 @@
 </head>
 
   <% if user_signed_in? %>
-<nav class="bg-primary navbar navbar-expand-md p-2">
-  <div class="container-fluid">
-    <%= button_tag type: 'button', class: 'navbar-toggler', data: { toggle: 'collapse', target: '#collapsibleNavbar' } do %>
-      <span id='nav_button', class="navbar-toggler-icon"></span>
-    <% end %>
+<div class="bg-primary menu-container p-2">
+  <div class="menu-toggle">
+    <%= image_tag("list.svg", width:"10%")  %>
+     
 
     <% if current_page?(root_path) %>
       <h3>Categories</h3>
     <% end %>
 
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav">
+    <nav class="menu">
+      <ul class="bg-primary text-light">
           <li class="nav-item">
-            <%= button_to 'Categories', user_groups_path(current_user), method: :get, class:"nav-link active" %>
+            <%= button_to 'Categories', user_groups_path(current_user), method: :get, class:"nav-link active text-center mx-auto" %>
           </li>
-        <li class="nav-item px-4">
-          <%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link active" %>
+        <li class="nav-item">
+          <%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link active text-center mx-auto" %>
         </li>
        <% else %>
-       <li class="nav-item px-4">
-          <%= button_to 'Sign in', new_user_session_path, method: :get, class:"nav-link active" %>
+       <li class="nav-item">
+          <%= button_to 'Sign in', new_user_session_path, method: :get, class:"nav-link active text-center mx-auto" %>
         </li>
        <% end %>
       </ul>
-    </div>
+    </nav>
 
   </div>
-</nav>
+</div>

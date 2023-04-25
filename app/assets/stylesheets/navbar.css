@@ -1,50 +1,31 @@
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    z-index: 8;
-  }
+.menu-container {
+  position: relative;
+}
 
-  #nav_button {
-  }
-  
-  .logo {
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .menu-toggle {
-    display: block;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  
-  .navigation {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: #f2f2f2;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: none;
-  }
-  
-  .navigation li {
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .navigation a {
-    display: block;
-    padding: 10px;
-    color: #333;
-    text-decoration: none;
-  }
-  
-  /* Show the navigation menu when the menu toggle is clicked */
-  .menu-toggle:focus + .navigation, .navigation:focus-within {
-    display: block;
-  }
-  
+.menu {
+  position: absolute;
+  top: 50.5px;
+  left: -19px;
+  padding: 20px;
+  display: none;
+}
+
+.menu ul {
+  list-style: none;
+  height: 90vh !important;
+}
+
+.nav-item {
+  width: 100px;
+  text-align: center;
+}
+
+.menu-toggle {
+  display: block;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.active {
+  display: block;
+}

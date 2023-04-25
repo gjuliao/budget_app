@@ -3,6 +3,10 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    z-index: 8;
+  }
+
+  #nav_button {
   }
   
   .logo {

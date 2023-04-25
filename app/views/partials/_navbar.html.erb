@@ -2,15 +2,19 @@
   <%= stylesheet_link_tag 'navbar' %>
 </head>
 
-<nav class="bg-primary navbar navbar-expand-md">
+  <% if user_signed_in? %>
+<nav class="bg-primary navbar navbar-expand-md p-2">
   <div class="container-fluid">
     <%= button_tag type: 'button', class: 'navbar-toggler', data: { toggle: 'collapse', target: '#collapsibleNavbar' } do %>
-      <span class="navbar-toggler-icon"></span>
+      <span id='nav_button', class="navbar-toggler-icon"></span>
+    <% end %>
+
+    <% if current_page?(root_path) %>
+      <h3>Categories</h3>
     <% end %>
 
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav">
-        <% if user_signed_in? %>
           <li class="nav-item">
             <%= button_to 'Categories', user_groups_path(current_user), method: :get, class:"nav-link active" %>
           </li>

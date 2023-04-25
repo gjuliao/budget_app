@@ -26,6 +26,7 @@
   display: block;
   padding: 10px;
   cursor: pointer;
+  z-index: 5;
 }
 
 .active {

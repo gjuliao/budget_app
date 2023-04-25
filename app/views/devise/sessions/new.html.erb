@@ -11,9 +11,6 @@
         <h5 class="text-light login">LOGIN</h5>
     </div>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-     <div class="actions">
-        <%= f.submit "Log in", class:"btn_login bg-primary" %>
-      </div>
   </div>
 
   <div style="width: 100%" class="mx-auto text-center">
@@ -32,6 +29,10 @@
           <% f.label :remember_me %>
         </div>
       <% end %>
+
+      <div class="actions">
+        <%= f.submit "Log in", class:"btn_login bg-primary devise_login_session_btn" %>
+      </div>
     <% end %>
   </div>
   <div class="text-center mt-2">

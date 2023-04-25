@@ -3,9 +3,8 @@ class EntitiesController < ApplicationController
 
   # GET /entities or /entities.json
   def index
-    @user = User.find(params[:user_id])
-    @group = Group.find(params[:group_id]
-    @entities = Entity.where(group_id: @group, user_id: @user)
+    @group = Group.find(params[:group_id])
+    @entities = Entity.where(group_id: @group, user_id: current_user.id)
   end
 
   # GET /entities/1 or /entities/1.json

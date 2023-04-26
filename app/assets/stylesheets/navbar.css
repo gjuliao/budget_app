@@ -1,5 +1,8 @@
 .menu-container {
   position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .menu {
@@ -34,10 +37,7 @@
 }
 
 .page_title {
-  position: fixed;
-  top: 0;
-  margin: auto;
-  width: 100%;
+  width: 50%;
   margin: auto;
 }
 

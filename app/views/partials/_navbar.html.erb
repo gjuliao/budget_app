@@ -5,7 +5,8 @@
   <% if user_signed_in? %>
 <div class="bg-primary menu-container p-2">
   <div class="menu-toggle">
-    <%= image_tag("list.svg", width:"10%")  %>
+    <%= image_tag("list.svg", width:"150%")  %>
+  </div>
      
     <div class="page_title text-light">
     <% if current_page?(user_groups_path(current_user)) %>
@@ -31,5 +32,4 @@
       </ul>
     </nav>
 
-  </div>
 </div>

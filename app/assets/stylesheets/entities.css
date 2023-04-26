@@ -1,25 +1,25 @@
 .entities {
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #EFF2F1;
-    margin-top: -3.5%;
-  }
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #eff2f1;
+  margin-top: -3.5%;
+}
 
-  .entity_card_total {
-    border-bottom: 1px solid lightgray;
-    position: fixed;
-    top: 8%;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    background-color: #EFF2F1;
-    padding: 2%;
-    margin-top: -3%;
-  }
+.entity_card_total {
+  border-bottom: 1px solid lightgray;
+  position: fixed;
+  top: 8%;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #eff2f1;
+  padding: 2%;
+  margin-top: -3%;
+}
 
 
-  .entity_card {
-    background-color: white;
-  }
+.entity_card {
+  background-color: white;
+}

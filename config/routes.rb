@@ -8,5 +8,10 @@ Rails.application.routes.draw do
     end
   end
 
-  root "users#index"
+
+  authenticated :user do
+   root 'groups#index', as: 'authenticated_root'
+  end
+
+  root 'static_pages#home'
 end

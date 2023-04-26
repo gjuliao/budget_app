@@ -1,9 +1,13 @@
 class GroupsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_group, only: %i[show edit update destroy]
 
   # GET /groups or /groups.json
   def index
-    @groups = Group.all
+    @groups = Group.where(user_id: current_user.id)
+    @total_amount = Entity.joins(group: :user).where(
+      group: { user_id: current_user.id }
+    ).where(user_id: current_user.id).distinct.sum(:amount)
   end
 
   # GET /groups/1 or /groups/1.json
@@ -20,10 +24,11 @@ class GroupsController < ApplicationController
   # POST /groups or /groups.json
   def create
     @group = Group.new(group_params)
+    @group.user = current_user
 
     respond_to do |format|
       if @group.save
-        format.html { redirect_to group_url(@group), notice: 'Group was successfully created.' }
+        format.html { redirect_to user_groups_path(current_user), notice: 'Group was successfully created.' }
         format.json { render :show, status: :created, location: @group }
       else
         format.html { render :new, status: :unprocessable_entity }

@@ -1,26 +1,41 @@
-<h2>Log in</h2>
+<head>
+  <%= stylesheet_link_tag 'login' %>
+</head>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+<div class="login_nav">
+  <div class="bg-primary pt-5 pb-3 px-3 d-flex justify-content-between">
+   <div class="actions">
+      <a class="text-light" href="/"><%= image_tag("arrow-left.svg", width:"180%")  %></a>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
+    <div class="">
+        <h5 class="text-light login">LOGIN</h5>
+    </div>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   </div>
-<% end %>
 
-<%= render "devise/shared/links" %>
+  <div style="width: 100%" class="mx-auto text-center">
+      <div class="field">
+        <% f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class:"w-100 p-2" %>
+      </div>
+
+      <div class="field w-100">
+        <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class:"w-100 p-2" %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="field">
+          <% f.check_box :remember_me %>
+          <% f.label :remember_me %>
+        </div>
+      <% end %>
+
+      <div class="actions">
+        <%= f.submit "Log in", class:"btn_login bg-primary devise_login_session_btn" %>
+      </div>
+    <% end %>
+  </div>
+  <div class="text-center mt-2">
+    <%= render "devise/shared/links" %>
+  </div>
+</div>

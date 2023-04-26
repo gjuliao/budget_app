@@ -1,29 +1,54 @@
-<h2>Sign up</h2>
+<head>
+  <%= stylesheet_link_tag 'login' %>
+</head>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+<div class="login_nav">
+  <div class="bg-primary pt-5 pb-3 px-3 d-flex justify-content-between">
+   <div class="actions">
+      <a class="text-light" href="/"><%= image_tag("arrow-left.svg", width:"180%")  %></a>
+    </div>
+    <div class="">
+        <h5 class="text-light login">REGISTER</h5>
+    </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+</div>
+
+    <div class="w-100 m-2">
+      <div class="d-flex">
+        <%= image_tag("person-circle.svg", width: "10%")  %>
+        <p class="my-auto mx-5">Upload User Picture</p>
+      </div>
+    </div>
+
+  <div style="width: 100%" class="mx-auto text-center">
+      <div class="field">
+        <% f.label :name %><br />
+        <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Full Name", class:"w-100 p-2" %>
+      </div>
+
+      <div class="field">
+        <% f.label :email %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class:"w-100 p-2" %>
+      </div>
+
+      <div class="field">
+        <% f.label :password %>
+        <%= f.password_field :password, autocomplete: "new-password", placeholder: "New Password Minimum 6 charachters length", class:"w-100 p-2" %>
+      </div>
+
+      <div class="field">
+        <% f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm Password", class:"w-100 p-2" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Next", class:"btn_login bg-primary devise_register_submit" %>
+      </div>
+    <% end %>
   </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+    <% render "devise/shared/links" %>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>

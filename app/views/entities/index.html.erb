@@ -1,14 +1,23 @@
-<p style="color: green"><%= notice %></p>
+<head>
+  <%= stylesheet_link_tag 'entities' %>
+</head>
 
-<h1>Entities</h1>
+<div class="entities">
 
-<div id="entities">
-  <% @entities.each do |entity| %>
-    <%= render entity %>
-    <p>
-      <%= link_to "Show this entity", entity %>
-    </p>
-  <% end %>
+  <div class="entity_card_total px-4">
+   <p> Total: </p>
+    <p> <strong> <%= @entities_sum %> </strong>  </p>
+ </div>
+
+
+  <div id="entities">
+    <% @entities.each do |entity| %>
+      <%= render entity %>
+      <p>
+        <% link_to "Show this entity", user_group_entities_path(current_user, @group) %>
+      </p>
+    <% end %>
+  </div>
+
+  <%= link_to "NEW TRANSACTION", new_user_group_entity_path(current_user, @group), class:"w-100 text-center bg-primary p-4 text-light text-decoration-none" %>
 </div>
-
-<%= link_to "New entity", new_entity_path %>

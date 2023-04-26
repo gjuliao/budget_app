@@ -19,6 +19,12 @@
     <nav class="menu">
       <ul class="bg-primary text-light">
           <li class="nav-item pt-4">
+           <%= image_tag("person-circle.svg", width:"60%")  %>
+          </li>
+          <li class="nav-item pt-4">
+           <%= current_user.name %>
+          </li>
+          <li class="nav-item pt-4">
             <%= button_to 'Categories', user_groups_path(current_user), method: :get, class:"nav-link active text-center" %>
           </li>
         <li class="nav-item pt-4">

@@ -1,10 +1,10 @@
 <div id="<%= dom_id group %>">
   <div class="w-100 mt-2 p-2">
-    <div class="d-flex group p-4">
+    <div class="d-flex group p-4 justify-content-between">
       <%= image_tag("person-circle.svg", width: "10%")  %>
-      <p class="my-auto mx-5"><%= group.name %>, <%= group.user_id %></p>
+      <p class="my-auto"><%= group.name %></p>
       <% sum = group.entities.sum(&:amount) %>
-       <p>  <%= sum %> </p>
+       <p class="my-auto">  <%= sum %> </p>
     </div>
   </div>
 </div>

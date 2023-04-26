@@ -3,7 +3,10 @@
 </head>
 
 <div class="categories" style="width:100%">
-  <div><%= @total_amount %></div>
+  <div class="category_card_total px-4">
+   <p> Total: </p>
+    <p> <strong> <%= @total_amount %> </strong>  </p>
+ </div>
   <div id="groups">
     <% @groups.each do |group| %>
       <%= link_to(user_group_entities_path(current_user, group), class:"text-decoration-none text-reset") do %>

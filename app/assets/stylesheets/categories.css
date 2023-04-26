@@ -6,6 +6,18 @@
   background-color: #EFF2F1;
 }
 
+.category_card_total {
+  border-bottom: 1px solid lightgray;
+  position: fixed;
+  top: 8%;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #EFF2F1;
+  padding: 2%;
+  margin-top: -3%;
+}
+
 .group {
   border: 1px solid gray;
   background-color: white;

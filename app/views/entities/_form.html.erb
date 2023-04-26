@@ -21,6 +21,20 @@
     <%= form.text_field :amount %>
   </div>
 
+  <% if params[:format] %>
+    <%= hidden_field_tag 'group_id[]', params[:format] %>
+  <% else %>
+  <div class="m-1">
+    <%= form.label 'Category', class: "form-label text-muted" %>
+    <% User.find(current_user.id).groups.each do |group| %>
+      <div class="form-check">
+        <%= check_box_tag 'group_id[]', group.id, false, class: "form-check-input", id: "group_#{group.id}" %>
+        <%= label_tag "group_#{group.id}", group.name, class: "form-check-label text-muted", required: true %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
   <div>
     <%= form.submit %>
   </div>

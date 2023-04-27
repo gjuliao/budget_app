@@ -103,6 +103,7 @@ body {
 .devise_register_submit {
   position: fixed;
   top: 5%;
+  z-index: 2;
 }
 
 .devise_login_session_btn {

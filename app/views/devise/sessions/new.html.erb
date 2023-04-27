@@ -4,7 +4,7 @@
       <h5 class="text-light">Login</h5>
   </div>
 
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: false }) do |f| %>
   <div style="width: 100%" class="mx-auto text-center">
       <div class="field">
         <% f.label :email %><br />

@@ -12,7 +12,7 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree 
+ *= require_tree
  *= require_self
  */
 
@@ -60,7 +60,7 @@ body {
 }
 
 .btn_submit {
-  background-color: #5FB523;
+  background-color: #5fb523;
 }
 
 /* entities */
@@ -94,7 +94,7 @@ body {
 }
 
 .entity-title {
-  margin-top: 5%
+  margin-top: 5%;
 }
 
 .new_entity_submit {
@@ -102,7 +102,7 @@ body {
 }
 
 .btn_back {
-  background-color: #3877C1;
+  background-color: #3877c1;
 }
 
 /* login */
@@ -140,7 +140,7 @@ body {
   width: 100%;
   justify-content: space-between;
   top: 0;
-  background-color: #3877C1;
+  background-color: #3877c1;
 }
 
 .menu-container2 {
@@ -149,7 +149,7 @@ body {
   width: 100%;
   justify-content: space-between;
   top: 0;
-  background-color: #3877C1;
+  background-color: #3877c1;
   height: 7%;
 }
 
@@ -164,7 +164,11 @@ body {
 }
 
 .menu-toggle {
-  background-color: #3877C1
+  background-color: #3877c1;
+  display: block;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 5;
 }
 
 .menu ul {
@@ -177,16 +181,9 @@ body {
   text-align: center;
 }
 
-.menu-toggle {
-  display: block;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 5;
-}
-
 .active {
   display: block;
-  background-color: #3877C1;
+  background-color: #3877c1;
   z-index: 8;
 }
 
@@ -209,5 +206,3 @@ body {
 .static {
   height: 80vh;
 }
-
-

@@ -14,12 +14,12 @@
 
     <div>
       <% form.label :name, style: "display: block" %>
-      <%= form.text_field :name, class:"mx-auto w-100 p-2", placeholder: "Name" %>
+      <%= form.text_field :name, class:"mx-auto w-100 m-2 p-2", placeholder: "Name" %>
     </div>
 
     <div>
       <% form.label :amount, style: "display: block" %>
-      <%= form.text_field :amount, class:"mx-auto w-100 p-2", placeholder: "Amount" %>
+      <%= form.text_field :amount, class:"mx-auto w-100 m-2 p-2", placeholder: "Amount" %>
     </div>
 
     <% if params[:format] %>
@@ -36,8 +36,8 @@
     </div>
   <% end %>
 
-    <div>
-      <%= form.submit class:"btn_submit" %>
+    <div class="entity-submit">
+      <%= form.submit class:"btn_submit_new" %>
     </div>
   <% end %>
 </div>

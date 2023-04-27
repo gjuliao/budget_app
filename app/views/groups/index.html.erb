@@ -1,3 +1,7 @@
+    <% if user_signed_in? %>
+      <%= render 'partials/navbar'  %>
+    <% end  %>
+
 <div class="categories" style="width:100%">
   <div class="category_card_total px-4">
    <p> Total: </p>
@@ -12,6 +16,6 @@
   </div>
 
 
-  <%= link_to "ADD CATEGORY", new_user_group_path(current_user), class:"mx-auto p-4 btn btn-primary w-100 text-light" %>
+  <%= link_to "ADD CATEGORY", new_user_group_path(current_user), class:"mx-auto p-4 btn w-100 text-light btn_submit" %>
 </div>
 

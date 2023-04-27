@@ -31,7 +31,7 @@ body {
 
 /* categories */
 .categories {
-  height: 80vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -59,14 +59,18 @@ body {
   border: none;
 }
 
+.btn_submit {
+  background-color: #5FB523;
+}
+
 /* entities */
 .entities {
-  height: 80vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: #eff2f1;
-  margin-top: -3.5%;
+  margin-top: 15%;
 }
 
 .entity_card_total {
@@ -83,6 +87,22 @@ body {
 
 .entity_card {
   background-color: white;
+}
+
+.new_entity {
+  margin-top: 10%;
+}
+
+.entity-title {
+  margin-top: 5%
+}
+
+.new_entity_submit {
+  margin: auto;
+}
+
+.btn_back {
+  background-color: #3877C1;
 }
 
 /* login */
@@ -123,14 +143,28 @@ body {
   background-color: #3877C1;
 }
 
+.menu-container2 {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  top: 0;
+  background-color: #3877C1;
+  height: 7%;
+}
+
 .menu {
   position: absolute;
-  top: 35.5px;
+  top: 95.5px;
   left: -19px;
   padding: 20px;
   display: none;
   z-index: 3;
   width: 60%;
+}
+
+.menu-toggle {
+  background-color: #3877C1
 }
 
 .menu ul {
@@ -152,11 +186,17 @@ body {
 
 .active {
   display: block;
+  background-color: #3877C1;
+  z-index: 8;
 }
 
 .page_title {
   width: 50%;
   margin: auto;
+}
+
+.entities_title {
+  margin-bottom: 10%;
 }
 
 .page_title h3 {

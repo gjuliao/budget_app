@@ -30,6 +30,14 @@ body {
   margin-top: 15%;
 }
 
+.categories-new {
+  margin-top: 15%;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #eff2f1;
+}
+
 .category_card_total {
   border-bottom: 1px solid lightgray;
   position: fixed;
@@ -176,10 +184,19 @@ body {
   position: fixed;
   display: flex;
   width: 100%;
-  justify-content: space-between;
   top: 0;
   background-color: #3877c1;
-  height: 7%;
+  padding: 10%;
+  color: white;
+}
+
+.cat-title {
+  margin-left: 25%;
+}
+
+.category-title-new {
+  margin-top: 15%;
+  padding-left: 10%;
 }
 
 .menu {
@@ -227,7 +244,7 @@ body {
 
 .page_title h3 {
   text-align: center;
-  padding-top: 5%;
+  padding-top: 4%;
   padding-right: 10%;
 }
 

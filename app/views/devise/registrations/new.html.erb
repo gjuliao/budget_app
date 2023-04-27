@@ -1,6 +1,6 @@
 <div class="">
   <div class="reg_navbar">
-      <a class="text-light" href="/"><%= image_tag("arrow-left.svg", width:"140%")  %></a>
+      <a class="text-light" href="/" data-turbo-preload><%= image_tag("arrow-left.svg", width:"140%")  %></a>
       <h5 class="text-light">REGISTER</h5>
   </div>
 
@@ -11,7 +11,7 @@
       </div>
     </div>
 
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false }) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
 
   <div style="width: 100%" class="mx-auto text-center">

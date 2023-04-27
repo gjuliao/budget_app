@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe 'Categories/public.html.erb', type: :feature do
-
   let(:user) { User.create(name: 'John', email: 'john@gmail.com', password: '1231231') }
 
   let(:group) do
@@ -16,13 +15,13 @@ RSpec.describe 'Categories/public.html.erb', type: :feature do
     expect(page).to_not have_selector('.categories', count: 1)
   end
 
-  it "displays each categories name" do
+  it 'displays each categories name' do
     Group.all.each do |group|
       expect(page).to have_selector('p', text: "##{group.name}")
     end
   end
 
-  it "displays each categories amount" do
+  it 'displays each categories amount' do
     Group.all.each do |group|
       expect(page).to have_selector('p', text: group.amount)
     end
@@ -35,9 +34,8 @@ RSpec.describe 'Categories/public.html.erb', type: :feature do
   end
 
   it "displays a 'View this group' link for each recipe" do
-    Group.all.each do |group|
+    Group.all.each do |_group|
       expect(page).to have_link('View this recipe', href: user_groups_path(user))
     end
   end
-
 end

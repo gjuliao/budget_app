@@ -1,8 +1,8 @@
-<head>
-  <%= stylesheet_link_tag 'entities' %>
-</head>
 
 <div class="entities">
+    <% if user_signed_in? %>
+      <%= render 'partials/navbarentities'  %>
+    <% end  %>
 
   <div class="entity_card_total px-4">
    <p> Total: </p>
@@ -19,5 +19,5 @@
     <% end %>
   </div>
 
-  <%= link_to "NEW TRANSACTION", new_user_group_entity_path(current_user, @group), class:"w-100 text-center bg-primary p-4 text-light text-decoration-none" %>
+  <%= link_to "NEW TRANSACTION", new_user_group_entity_path(current_user, @group), class:"w-100 text-center p-4 text-light text-decoration-none btn_submit" %>
 </div>

@@ -1,23 +1,15 @@
-<head>
-  <%= stylesheet_link_tag 'navbar' %>
-</head>
-
   <% if user_signed_in? %>
-<div class="bg-primary menu-container p-2">
+<div class="menu-container p-2">
   <div class="menu-toggle">
     <%= image_tag("list.svg", width:"150%")  %>
   </div>
      
     <div class="page_title text-light">
-    <% if current_page?(user_groups_path(current_user)) %>
       <h3>Categories</h3>
-    <% else %>
-      <h3>Transactions</h3>
-    <% end %>
     </div>
 
     <nav class="menu">
-      <ul class="bg-primary text-light">
+      <ul class="text-light">
           <li class="nav-item pt-4">
            <%= image_tag("person-circle.svg", width:"60%")  %>
           </li>

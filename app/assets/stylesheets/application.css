@@ -12,7 +12,7 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
+ *= require_tree
  *= require_self
  */
 
@@ -27,4 +27,182 @@
 
 body {
   background-color: #eff2f1;
+}
+
+/* categories */
+.categories {
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #eff2f1;
+  margin-top: 15%;
+}
+
+.category_card_total {
+  border-bottom: 1px solid lightgray;
+  position: fixed;
+  top: 8%;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #eff2f1;
+  padding: 2%;
+  margin-top: -3%;
+}
+
+.group {
+  background-color: white;
+}
+
+.btn-category {
+  border: none;
+}
+
+.btn_submit {
+  background-color: #5fb523;
+}
+
+/* entities */
+.entities {
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #eff2f1;
+  margin-top: 15%;
+}
+
+.entity_card_total {
+  border-bottom: 1px solid lightgray;
+  position: fixed;
+  top: 8%;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #eff2f1;
+  padding: 2%;
+  margin-top: -3%;
+}
+
+.entity_card {
+  background-color: white;
+}
+
+.new_entity {
+  margin-top: 10%;
+}
+
+.entity-title {
+  margin-top: 5%;
+}
+
+.new_entity_submit {
+  margin: auto;
+}
+
+.btn_back {
+  background-color: #3877c1;
+}
+
+/* login */
+.login_nav {
+  margin-top: -20%;
+}
+
+.login {
+  padding-left: 30% !important;
+}
+
+.btn_login {
+  border: none;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.devise_register_submit {
+  position: fixed;
+  top: 5%;
+  z-index: 2;
+}
+
+.devise_login_session_btn {
+  position: fixed;
+  top: 5%;
+  right: 2%;
+}
+
+/* navbar */
+.menu-container {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  top: 0;
+  background-color: #3877c1;
+}
+
+.menu-container2 {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  top: 0;
+  background-color: #3877c1;
+  height: 7%;
+}
+
+.menu {
+  position: absolute;
+  top: 95.5px;
+  left: -19px;
+  padding: 20px;
+  display: none;
+  z-index: 3;
+  width: 60%;
+}
+
+.menu-toggle {
+  background-color: #3877c1;
+  display: block;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.menu ul {
+  list-style: none;
+  height: 90vh !important;
+}
+
+.nav-item {
+  width: 100px;
+  text-align: center;
+}
+
+.active {
+  display: block;
+  background-color: #3877c1;
+  z-index: 8;
+}
+
+.page_title {
+  width: 50%;
+  margin: auto;
+}
+
+.entities_title {
+  margin-bottom: 10%;
+}
+
+.page_title h3 {
+  text-align: center;
+  padding-top: 5%;
+  padding-right: 10%;
+}
+
+/* static */
+.static {
+  height: 80vh;
 }

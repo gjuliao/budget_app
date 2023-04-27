@@ -17,10 +17,15 @@
       <%= form.text_field :name, class:"mx-auto w-100 p-2", placeholder: "Category Name" %>
     </div>
 
-    <div>
-      <% form.label :icon, style: "display: block" %>
-      <%= form.text_field :icon, class:"mx-auto w-100 p-2", placeholder: "Category Icon" %>
-    </div>
+        <div>
+          <% form.label :icon, style: "display: block" %>
+          <%= form.select :icon, options_for_select([
+            ['Health', 'https://cdn-icons-png.flaticon.com/512/883/883360.png'],
+            ['Travel', 'https://cdn-icons-png.flaticon.com/512/5088/5088100.png'],
+            ['Groceries', 'https://cdn-icons-png.flaticon.com/512/3724/3724720.png'], 
+            ['Sports', 'https://cdn-icons-png.flaticon.com/512/857/857492.png'], 
+            ['Education', 'https://cdn-icons-png.flaticon.com/512/3068/3068380.png']]), {prompt: 'Select Icon'}, class:"mx-auto w-100 p-2" %>
+        </div>
 
     <div>
       <%= form.submit class:"mx-auto w-100 p-2 btn btn-primary" %>

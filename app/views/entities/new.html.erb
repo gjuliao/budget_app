@@ -1,11 +1,15 @@
-<div class="container w-100">
+   <% if user_signed_in? %>
+      <%= render 'partials/navbarentities'  %>
+    <% end  %>
+
+<div class="container w-100 new_entity">
   <h1>New Transaction</h1>
 
   <%= render "form", entity: @entity %>
 
   <br>
 
-  <div>
-    <%= link_to "Back to categories", user_groups_path(current_user) %>
-  </div>
+
+    <%= link_to "Back to categories", user_groups_path(current_user), class:"text-light btn btn_back" %>
+
 </div>

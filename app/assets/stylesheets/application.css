@@ -51,13 +51,19 @@ body {
 }
 
 .btn_submit {
-  background-color: #5fb523;
-  padding: 2%;
-  border: white;
+  background-color:#5fb523;
+  padding: 5%;
+  border: 1px solid white;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  margin-left: 25%;
 }
 
 .btn-submit-parent {
   background-color: #5fb523;
+  width: 100%;
+  padding: 8%;
 }
 
 /* entities */

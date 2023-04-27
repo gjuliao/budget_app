@@ -36,6 +36,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   background-color: #eff2f1;
+  margin-top: 15%;
 }
 
 .category_card_total {
@@ -119,6 +120,7 @@ body {
   width: 100%;
   justify-content: space-between;
   top: 0;
+  background-color: #3877C1;
 }
 
 .menu {

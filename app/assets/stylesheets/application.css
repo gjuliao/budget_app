@@ -81,13 +81,13 @@ body {
   flex-direction: column;
   justify-content: space-between;
   background-color: #eff2f1;
-  margin-top: 15%;
+  margin-top: 25%;
 }
 
 .entity_card_total {
   border-bottom: 1px solid lightgray;
   position: fixed;
-  top: 8%;
+  top: 18%;
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -106,6 +106,10 @@ body {
 
 .entity-title {
   margin-top: 5%;
+}
+
+.entity-title3 {
+  padding-left: 23%;
 }
 
 .new_entity_submit {
@@ -181,6 +185,16 @@ body {
 }
 
 .menu-container2 {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  top: 0;
+  background-color: #3877c1;
+  padding: 10%;
+  color: white;
+}
+
+.menu-container3 {
   position: fixed;
   display: flex;
   width: 100%;

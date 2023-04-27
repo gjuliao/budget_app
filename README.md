@@ -49,7 +49,7 @@
 
 ### Key Features <a name="key-features"></a>
   
-  #### [Check out the live demo](https://budget-app-be7x.onrender.com/)
+  #### [Check out the live demo](https://budget-app-be7x.onrender.com)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->

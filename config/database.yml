@@ -74,7 +74,7 @@ test:
 # URL environment variable explicitly:
 #
   production:
-    url: <%= ENV["postgres://budget_app_gjtw_user:7lySJ1bkmF6Cj4iCiKExJ4FL8txS4iHE@dpg-ch5bknt269v8910is0f0-a.oregon-postgres.render.com/budget_app_gjtw"] %>
+    url: <%= ENV["MY_APP_DATABASE_URL"] %>
 #
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.

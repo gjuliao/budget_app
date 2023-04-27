@@ -110,6 +110,7 @@ body {
   color: white;
   text-decoration: none;
   display: inline-block;
+  z-index: 5;
 }
 
 .devise_register_submit {

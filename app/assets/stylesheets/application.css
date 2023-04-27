@@ -52,6 +52,12 @@ body {
 
 .btn_submit {
   background-color: #5fb523;
+  padding: 2%;
+  border: white;
+}
+
+.btn-submit-parent {
+  background-color: #5fb523;
 }
 
 /* entities */

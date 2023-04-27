@@ -113,10 +113,35 @@ body {
   z-index: 5;
 }
 
-.devise_register_submit {
+.reg_navbar {
+  background-color: #3877c1;
+  display: flex;
+  justify-content: space-around;
+  padding: 5%;
   position: fixed;
-  top: 5%;
-  z-index: 2;
+  top: 0;
+  width: 100%;
+}
+
+.reg_navbar h5 {
+  padding-right: 30%;
+}
+
+.icon-reg {
+  margin-top: 10%;
+  margin-left: 5%;
+}
+
+.devise_register_submit {
+  position: absolute;
+  top: 2%;
+  z-index: 6;
+  right: 2%;
+  border: none;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #3877c1;
 }
 
 .devise_login_session_btn {

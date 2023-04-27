@@ -1,12 +1,14 @@
-  <% if user_signed_in? %>
-<div class="menu-container p-2">
-  <div class="menu-toggle">
-    <%= image_tag("list.svg", width:"150%")  %>
-  </div>
-     
-    <div class="page_title text-light">
-      <h3>Categories</h3>
+<% if user_signed_in? %>
+<div class="menu-container">
+    <div class="menu-toggle">
+      <%= image_tag("list.svg", width:"150%")  %>
     </div>
+     
+
+
+      <div class="page_title text-light">
+        <h3>Categories</h3>
+      </div>
 
     <nav class="menu">
       <ul class="text-light">
@@ -26,8 +28,8 @@
        <li class="nav-item pt-4">
           <%= button_to 'Sign in', new_user_session_path, method: :get, class:"nav-link active text-center mx-auto" %>
         </li>
-       <% end %>
       </ul>
     </nav>
 
 </div>
+<% end %>

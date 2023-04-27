@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Categories', type: :request do
+RSpec.describe 'Entities', type: :request do
   describe 'GET /' do
     subject { get '/' }
     before { subject }

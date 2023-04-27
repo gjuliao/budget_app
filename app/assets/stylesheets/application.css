@@ -101,7 +101,7 @@ body {
 }
 
 .new_entity {
-  margin-top: 10%;
+  margin-top: 25%;
 }
 
 .entity-title {
@@ -114,6 +114,22 @@ body {
 
 .new_entity_submit {
   margin: auto;
+}
+
+.btn_submit_new {
+  background-color: #5fb523;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding: 2%;
+  border: 1px solid white;
+  margin-left: 32%;
+  color: white;
+}
+
+.entity-submit {
+  background-color: #5fb523;
+  padding: 2%;
+  margin-top: 7%;
 }
 
 .btn_back {

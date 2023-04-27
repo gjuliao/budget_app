@@ -38,6 +38,12 @@ body {
   background-color: #eff2f1;
 }
 
+.cat-title-index {
+  margin-top: -10%;
+  padding-left: 25%;
+  color: white;
+}
+
 .category_card_total {
   border-bottom: 1px solid lightgray;
   position: fixed;
@@ -198,6 +204,7 @@ body {
   justify-content: space-between;
   top: 0;
   background-color: #3877c1;
+  padding: 8%;
 }
 
 .menu-container2 {

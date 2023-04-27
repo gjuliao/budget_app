@@ -1,22 +1,26 @@
 
-<%= render 'partials/navbar'  %>
+
+  <%= render 'partials/navbar'  %>
 
 
-<div class="categories" style="width:100%">
-  <div class="category_card_total">
-   <p> Total: </p>
-    <p> <strong> <%= @total_amount %> </strong>  </p>
- </div>
-  <div id="groups">
-    <% @groups.each do |group| %>
-      <%= link_to(user_group_entities_path(current_user, group), class:"text-decoration-none text-reset") do %>
-        <%= render group %>
-      <% end %>
-    <% end %>
-  </div>
+<div>
+    <div class="categories" style="width:100%">
+      <div class="category_card_total">
+        <p> Total: </p>
+        <p> <strong> <%= @total_amount %> </strong>  </p>
+      </div>
 
-  <div class="btn-submit-parent">
-  <%= link_to "ADD CATEGORY", new_user_group_path(current_user), class:"btn_submit" %>
+      <div id="groups">
+        <% @groups.each do |group| %>
+          <%= link_to(user_group_entities_path(current_user, group), class:"") do %>
+            <%= render group %>
+          <% end %>
+        <% end %>
+      </div>
+
+      <div class="btn-submit-parent">
+        <%= link_to "ADD CATEGORY", new_user_group_path(current_user), class:"btn_submit" %>
+      </div>
   </div>
 </div>
 

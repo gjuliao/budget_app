@@ -1,14 +1,10 @@
-<div class="login_nav">
-  <div class="bg-primary pt-5 pb-3 px-3 d-flex justify-content-between">
-   <div class="actions">
-      <a class="text-light" href="/"><%= image_tag("arrow-left.svg", width:"180%")  %></a>
-    </div>
-    <div class="">
-        <h5 class="text-light login">LOGIN</h5>
-    </div>
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<div class="">
+  <div class="reg_navbar">
+      <a class="text-light" href="/"><%= image_tag("arrow-left.svg", width:"140%")  %></a>
+      <h5 class="text-light">Login</h5>
   </div>
 
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div style="width: 100%" class="mx-auto text-center">
       <div class="field">
         <% f.label :email %><br />
@@ -27,7 +23,7 @@
       <% end %>
 
       <div class="actions">
-        <%= f.submit "Log in", class:"btn_login bg-primary devise_login_session_btn" %>
+        <%= f.submit "Log in", class:"devise_register_submit" %>
       </div>
     <% end %>
   </div>

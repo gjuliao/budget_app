@@ -20,7 +20,7 @@
     </div>
     <div class="m-1">
       <%= form.label 'Category', class: "form-label text-muted" %>
-      <%= form.collection_check_boxes :group_ids, Group.all, :id, :name, { checked: @entity.group_ids }, { required: true } do |cb| %>
+      <%= form.collection_check_boxes :group_ids, Group.all, :id, :name, { checked: @entity.group_ids } do |cb| %>
         <%= cb.check_box %>
         <%= cb.label %>
       <% end %>

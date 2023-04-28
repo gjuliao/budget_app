@@ -84,12 +84,12 @@ body {
 
 /* entities */
 .entities {
-  height: 85vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: #eff2f1;
-  margin-top: 25%;
+  margin-top: 40%;
 }
 
 .entity_card_total {

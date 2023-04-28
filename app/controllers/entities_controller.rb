@@ -1,28 +1,26 @@
 class EntitiesController < ApplicationController
-  before_action :set_group, only: [:index, :create]
-  before_action :set_entity, only: [:show, :edit, :update, :destroy]
+  before_action :set_group, only: %i[index create]
+  before_action :set_entity, only: %i[show edit update destroy]
 
   def index
-    @entities = @group.entities.where(user_id: current_user.id)
+    @entities = @group.entities.where(user_id: current_user.id).order(created_at: :desc)
     @entities_sum = @entities.sum(:amount)
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @entity = Entity.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     @entity = @group.entities.build(entity_params)
     @entity.user = current_user
 
     if @entity.save
-      redirect_to user_group_path(params[:user_id], params[:group_id])
+      redirect_to user_group_entities_path(params[:user_id], params[:group_id])
     else
       render :new
     end
@@ -55,4 +53,3 @@ class EntitiesController < ApplicationController
     params.require(:entity).permit(:name, :amount, group_ids: [])
   end
 end
-

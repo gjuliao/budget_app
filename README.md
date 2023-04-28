@@ -155,7 +155,7 @@ If you like this project please give it a star.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank the Microverse team for the creation of this example project.
+[Gregoire Vella on Behance](https://www.behance.net/gregoirevella) as the author of the original design, as required by the Creative Commons license of the design.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

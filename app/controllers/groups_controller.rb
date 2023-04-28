@@ -5,9 +5,6 @@ class GroupsController < ApplicationController
   # GET /groups or /groups.json
   def index
     @groups = Group.where(user_id: current_user.id)
-    @total_amount = Entity.joins(group: :user).where(
-      group: { user_id: current_user.id }
-    ).where(user_id: current_user.id).distinct.sum(:amount)
   end
 
   # GET /groups/1 or /groups/1.json

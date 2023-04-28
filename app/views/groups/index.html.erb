@@ -1,21 +1,22 @@
-    <% if user_signed_in? %>
-      <%= render 'partials/navbar'  %>
-    <% end  %>
 
-<div class="categories" style="width:100%">
-  <div class="category_card_total px-4">
-   <p> Total: </p>
-    <p> <strong> <%= @total_amount %> </strong>  </p>
- </div>
-  <div id="groups">
-    <% @groups.each do |group| %>
-      <%= link_to(user_group_entities_path(current_user, group), class:"text-decoration-none text-reset") do %>
-        <%= render group %>
-      <% end %>
-    <% end %>
+
+  <%= render 'partials/navbar'  %>
+
+
+<div>
+    <div class="categories" style="width:100%">
+
+      <div id="groups">
+        <% @groups.each do |group| %>
+          <%= link_to(user_group_entities_path(current_user, group), class:"") do %>
+            <%= render group %>
+          <% end %>
+        <% end %>
+      </div>
+
+      <div class="btn-submit-parent">
+        <%= link_to "ADD CATEGORY", new_user_group_path(current_user), class:"btn_submit" %>
+      </div>
   </div>
-
-
-  <%= link_to "ADD CATEGORY", new_user_group_path(current_user), class:"mx-auto p-4 btn w-100 text-light btn_submit" %>
 </div>
 

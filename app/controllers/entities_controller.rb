@@ -1,71 +1,48 @@
 class EntitiesController < ApplicationController
-  before_action :set_entity, only: %i[show edit update destroy]
-  before_action :set_expense, only: %i[edit update destroy]
+  before_action :set_group, only: [:index, :create]
+  before_action :set_entity, only: [:show, :edit, :update, :destroy]
 
-  # GET /entities or /entities.json
   def index
-    @group = Group.find(params[:group_id])
-    @entities = Entity.where(group_id: @group, user_id: current_user.id)
-    @entities_sum = Entity.where(group_id: @group, user_id: current_user.id).sum(:amount)
+    @entities = @group.entities.where(user_id: current_user.id)
+    @entities_sum = @entities.sum(:amount)
   end
 
-  # GET /entities/1 or /entities/1.json
-  def show; end
+  def show
+  end
 
-  # GET /entities/new
   def new
     @entity = Entity.new
   end
 
-  # GET /entities/1/edit
-  def edit; end
+  def edit
+  end
 
-  # POST /entities or /entities.json
   def create
-    @entity = Entity.new(entity_params)
+    @entity = @group.entities.build(entity_params)
     @entity.user = current_user
 
-    respond_to do |format|
-      if @entity.save
-        @group_entity = GroupEntity.create(group: @group, entity: @entity)
-        format.html do
-          redirect_to user_group_entites_path(params[:user_id], params[:group_id], @entity),
-                      notice: 'Entity was successfully created.'
-        end
-        format.json { render :show, status: :created, location: @entity }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @entity.errors, status: :unprocessable_entity }
-      end
+    if @entity.save
+      redirect_to user_group_path(params[:user_id], params[:group_id])
+    else
+      render :new
     end
   end
 
-  # PATCH/PUT /entities/1 or /entities/1.json
   def update
-    respond_to do |format|
-      if @entity.update(entity_params)
-        format.html { redirect_to entity_url(@entity), notice: 'Entity was successfully updated.' }
-        format.json { render :show, status: :ok, location: @entity }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @entity.errors, status: :unprocessable_entity }
-      end
+    if @entity.update(entity_params)
+      redirect_to entity_path(@entity), notice: 'Entity was successfully updated.'
+    else
+      render :edit
     end
   end
 
-  # DELETE /entities/1 or /entities/1.json
   def destroy
     @entity.destroy
-
-    respond_to do |format|
-      format.html { redirect_to entities_url, notice: 'Entity was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to entities_url, notice: 'Entity was successfully destroyed.'
   end
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_group
     @group = current_user.groups.find(params[:group_id])
   end
@@ -75,6 +52,7 @@ class EntitiesController < ApplicationController
   end
 
   def entity_params
-    params.require(:entity).permit(:name, :amount)
+    params.require(:entity).permit(:name, :amount, group_ids: [])
   end
 end
+

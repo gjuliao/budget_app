@@ -1,3 +1,5 @@
+/* stylelint-disable csstree/validator  */
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -10,6 +12,328 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
+ *= require_tree
  *= require_self
  */
+
+body {
+  background-color: #eff2f1;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+}
+
+/* categories */
+.categories {
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #eff2f1;
+  margin-top: 20%;
+}
+
+.categories-new {
+  margin-top: 15%;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #eff2f1;
+}
+
+.cat-title-index {
+  margin-top: -8%;
+  margin-left: 25%;
+  color: white;
+  margin-bottom: 5%;
+}
+
+.category_card_total {
+  border-bottom: 1px solid lightgray;
+  position: fixed;
+  top: 20%;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #eff2f1;
+  padding: 2%;
+  margin-top: -3%;
+}
+
+.group-card {
+  width: 100%;
+  margin-top: 2%;
+  padding-bottom: 2%;
+  text-decoration: none !important;
+}
+
+.group {
+  background-color: white;
+  font-size: 1.3rem;
+  display: flex;
+  padding: 4%;
+  justify-content: space-between;
+}
+
+.group-card p {
+  text-decoration: none;
+}
+
+.group-p {
+  padding-top: 2%;
+}
+
+.btn-category {
+  border: none;
+}
+
+.btn_submit {
+  background-color: #5fb523;
+  padding: 5%;
+  border: 1px solid white;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  margin-left: 25%;
+}
+
+.btn-submit-parent {
+  background-color: #5fb523;
+  width: 100%;
+  padding: 8%;
+}
+
+/* entities */
+.entities {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #eff2f1;
+  margin-top: 40%;
+}
+
+.entity_card_total {
+  border-bottom: 1px solid lightgray;
+  position: fixed;
+  top: 18%;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #eff2f1;
+  padding: 2%;
+  margin-top: -3%;
+  font-size: 1.4rem;
+}
+
+.entity_card {
+  background-color: white;
+  font-size: 1.3rem;
+}
+
+.created-at {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.new_entity {
+  margin-top: 25%;
+}
+
+.entity-title {
+  margin-top: 5%;
+}
+
+.entity-title3 {
+  padding-left: 23%;
+}
+
+.new_entity_submit {
+  margin: auto;
+}
+
+.btn_submit_new {
+  background-color: #5fb523;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border: 1px solid white;
+  margin-left: 32%;
+  color: white;
+}
+
+.entity-submit {
+  background-color: #5fb523;
+  padding: 2%;
+  margin-top: 7%;
+}
+
+.btn_back {
+  background-color: #3877c1;
+}
+
+/* login */
+.login_nav {
+  margin-top: -20%;
+}
+
+.login {
+  padding-left: 30% !important;
+}
+
+.btn_login {
+  border: none;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  z-index: 5;
+}
+
+.reg_navbar {
+  background-color: #3877c1;
+  display: flex;
+  justify-content: space-around;
+  padding: 5%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.reg_navbar h5 {
+  padding-right: 30%;
+}
+
+.icon-reg {
+  margin-top: 10%;
+  margin-left: 5%;
+}
+
+.devise_register_submit {
+  position: absolute;
+  top: 2%;
+  z-index: 6;
+  right: 2%;
+  border: none;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #3877c1;
+}
+
+.devise_login_session_btn {
+  position: fixed;
+  top: 5%;
+  right: 2%;
+}
+
+/* navbar */
+.menu-container {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  top: 0;
+  background-color: #3877c1;
+  padding: 6%;
+}
+
+.menu-container2 {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  top: 0;
+  background-color: #3877c1;
+  padding: 10%;
+  color: white;
+}
+
+.menu-container3 {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  top: 0;
+  background-color: #3877c1;
+  padding: 10%;
+  color: white;
+}
+
+.cat-title {
+  margin-left: 25%;
+}
+
+.category-title-new {
+  margin-top: 15%;
+  padding-left: 10%;
+}
+
+.menu {
+  position: absolute;
+  top: 95.5px;
+  left: -19px;
+  padding: 20px;
+  display: none;
+  z-index: 3;
+  width: 60%;
+}
+
+.menu-toggle {
+  background-color: #3877c1;
+  display: block;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.menu ul {
+  list-style: none;
+  height: 90vh !important;
+}
+
+.nav-item {
+  width: 100px;
+  text-align: center;
+}
+
+.recent {
+  display: flex;
+  color: white;
+  justify-content: space-around;
+  padding-top: 12%;
+  z-index: 20;
+  width: 100%;
+}
+
+.recent-first {
+  color: white;
+  font-weight: 700;
+}
+
+.recent-second {
+  color: rgba(217, 213, 213, 0.884);
+}
+
+.active {
+  display: block;
+  background-color: #3877c1;
+  z-index: 8;
+}
+
+.page_title {
+  width: 50%;
+  margin: auto;
+}
+
+.entities_title {
+  margin-bottom: 10%;
+}
+
+.page_title h3 {
+  text-align: center;
+  padding-top: 4%;
+  padding-right: 10%;
+}
+
+/* static */
+.static {
+  height: 80vh;
+}

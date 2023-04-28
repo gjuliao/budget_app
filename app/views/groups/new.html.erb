@@ -1,0 +1,15 @@
+
+<%= render 'partials/navbarcatnew'  %>
+
+<div class="categories-new" style="width:100%">
+
+  <h3 class="category-title-new">Add New Category</h3>
+
+  <%= render "form", group: @group %>
+
+  <br>
+
+  <div>
+    <%= link_to "Back to groups", user_groups_path %>
+  </div>
+</div>

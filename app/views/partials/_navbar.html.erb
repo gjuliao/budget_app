@@ -1,0 +1,35 @@
+<div class="menu-container">
+    <div class="menu-container menu-toggle" id="menu-toggle">
+        <a class="" href="/" data-turbo-preload> <%= image_tag("list.svg", width:"10%")%> </a>
+        <h3 class="cat-title-index">CATEGORIES</h3>
+    </div>
+
+    <div class="recent">
+      <p class="recent-first">Most Recent</p>
+      <p class="recent-second">Most Ancient</p>
+    </div>
+
+    <nav class="menu" id="menu">
+      <ul class="">
+          <li class="nav-item pt-4">
+           <%= image_tag("person-circle.svg", width:"60%")  %>
+          </li>
+          <li class="nav-item pt-4">
+           <%= current_user.name %>
+          </li>
+          <li class="nav-item pt-4">
+            <%= button_to 'Categories', user_groups_path(current_user), method: :get, class:"nav-link active text-center" %>
+          </li>
+        <% if user_signed_in? %>
+        <li class="nav-item pt-4">
+          <%= button_to 'Sign Out', destroy_user_session_path, data: { confirm: "Are you sure?" }, method: :delete, class:"nav-link active text-center" %>
+        </li>
+       <% else %>
+       <li class="nav-item pt-4">
+          <%= button_to 'Sign in', new_user_session_path, method: :get, class:"nav-link active text-center mx-auto" %>
+        </li>
+        <% end %>
+      </ul>
+    </nav>
+
+</div>

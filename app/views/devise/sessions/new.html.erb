@@ -1,0 +1,33 @@
+<div class="">
+  <div class="reg_navbar">
+      <a class="text-light" href="/" data-turbo-preload><%= image_tag("arrow-left.svg", width:"140%")  %></a>
+      <h5 class="text-light">Login</h5>
+  </div>
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: false }) do |f| %>
+  <div style="width: 100%" class="mx-auto text-center">
+      <div class="field">
+        <% f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class:"w-100 p-2" %>
+      </div>
+
+      <div class="field w-100">
+        <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class:"w-100 p-2" %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="field">
+          <% f.check_box :remember_me %>
+          <% f.label :remember_me %>
+        </div>
+      <% end %>
+
+      <div class="actions">
+        <%= f.submit "Log in", class:"devise_register_submit" %>
+      </div>
+    <% end %>
+  </div>
+  <div class="text-center mt-2">
+    <%= render "devise/shared/links" %>
+  </div>
+</div>

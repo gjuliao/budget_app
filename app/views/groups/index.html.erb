@@ -1,0 +1,22 @@
+
+
+  <%= render 'partials/navbar'  %>
+
+
+<div>
+    <div class="categories" style="width:100%">
+
+      <div id="groups" class="text-decoration-none">
+        <% @groups.each do |group| %>
+          <%= link_to(user_group_entities_path(current_user, group), class:"text-decoration-none text-dark") do %>
+            <%= render group %>
+          <% end %>
+        <% end %>
+      </div>
+
+      <div class="btn-submit-parent">
+        <%= link_to "ADD CATEGORY", new_user_group_path(current_user), class:"btn_submit" %>
+      </div>
+  </div>
+</div>
+

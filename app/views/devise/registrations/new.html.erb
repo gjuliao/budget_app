@@ -1,0 +1,46 @@
+<div class="">
+  <div class="reg_navbar">
+      <a class="text-light" href="/" data-turbo-preload><%= image_tag("arrow-left.svg", width:"140%")  %></a>
+      <h5 class="text-light">REGISTER</h5>
+  </div>
+
+    <div class="w-100 icon-reg">
+      <div class="d-flex">
+        <%= image_tag("person-circle.svg", width: "10%")  %>
+        <p class="my-auto mx-5">Upload User Picture</p>
+      </div>
+    </div>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false }) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div style="width: 100%" class="mx-auto text-center">
+      <div class="field">
+        <% f.label :name %><br />
+        <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Full Name", class:"w-100 p-2" %>
+      </div>
+
+      <div class="field">
+        <% f.label :email %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class:"w-100 p-2" %>
+      </div>
+
+      <div class="field">
+        <% f.label :password %>
+        <%= f.password_field :password, autocomplete: "new-password", placeholder: "New Password Minimum 6 charachters length", class:"w-100 p-2" %>
+      </div>
+
+      <div class="field">
+        <% f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm Password", class:"w-100 p-2" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Next", class:"devise_register_submit" %>
+      </div>
+    <% end %>
+  </div>
+
+    <% render "devise/shared/links" %>
+
+  </div>

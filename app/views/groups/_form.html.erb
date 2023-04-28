@@ -1,0 +1,34 @@
+<div class="create-group">
+  <%= form_with(model: @group, url: user_groups_path) do |form| %>
+    <% if group.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(group.errors.count, "error") %> prohibited this group from being saved:</h2>
+
+        <ul>
+          <% group.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div>
+      <% form.label :name, style: "display: block" %>
+      <%= form.text_field :name, class:"mx-auto w-100 p-2 m-2", placeholder: "Category Name" %>
+    </div>
+
+        <div>
+          <% form.label :icon, style: "display: block" %>
+          <%= form.select :icon, options_for_select([
+            ['Health', 'https://cdn-icons-png.flaticon.com/512/1759/1759361.png'],
+            ['Travel', 'https://cdn-icons-png.flaticon.com/512/201/201623.png'],
+            ['Groceries', 'https://cdn-icons-png.flaticon.com/512/3225/3225194.png'], 
+            ['Sports', 'https://cdn-icons-png.flaticon.com/512/857/857455.png'], 
+            ['Education', 'https://cdn-icons-png.flaticon.com/512/4207/4207253.png']]), {prompt: 'Select Icon'}, class:"mx-auto w-100 p-2" %>
+        </div>
+
+    <div>
+      <%= form.submit class:"mx-auto w-100 p-2 m-2 btn btn_submit" %>
+    </div>
+  <% end %>
+</div>

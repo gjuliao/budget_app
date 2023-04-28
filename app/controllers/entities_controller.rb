@@ -1,5 +1,6 @@
 class EntitiesController < ApplicationController
   before_action :set_entity, only: %i[show edit update destroy]
+  before_action :set_expense, only: %i[edit update destroy]
 
   # GET /entities or /entities.json
   def index
@@ -23,12 +24,12 @@ class EntitiesController < ApplicationController
   def create
     @entity = Entity.new(entity_params)
     @entity.user = current_user
-    @entity.group = Group.find(params[:group_id])
 
     respond_to do |format|
       if @entity.save
+        @group_entity = GroupEntity.create(group: @group, entity: @entity)
         format.html do
-          redirect_to user_group_entities_path(current_user, @entity.group), notice: 'Entity was successfully created.'
+          redirect_to user_group_entites_path(params[:user_id], params[:group_id], @entity), notice: 'Entity was successfully created.'
         end
         format.json { render :show, status: :created, location: @entity }
       else
@@ -64,12 +65,15 @@ class EntitiesController < ApplicationController
   private
 
   # Use callbacks to share common setup or constraints between actions.
+  def set_group
+    @group = current_user.groups.find(params[:group_id])
+  end
+
   def set_entity
     @entity = Entity.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
   def entity_params
-    params.require(:entity).permit(:name, :amount, :user_id, :group_id)
+    params.require(:entity).permit(:name, :amount)
   end
 end

@@ -1,5 +1,5 @@
 <div>
-  <%= form_with(model: @entity, url: user_group_entities_path(current_user)) do |form| %>
+  <%= form_with(model: @entity, url: user_group_entities_path(params[:user_id], params[:group_id])) do |form| %>
     <% if entity.errors.any? %>
       <div style="color: red">
         <h2><%= pluralize(entity.errors.count, "error") %> prohibited this entity from being saved:</h2>
@@ -22,19 +22,13 @@
       <%= form.text_field :amount, class:"mx-auto w-100 m-2 p-2", placeholder: "Amount" %>
     </div>
 
-    <% if params[:format] %>
-      <%= hidden_field_tag 'group_id[]', params[:format] %>
-    <% else %>
-    <div class="m-1">
-      <%= form.label 'Category', class: "form-label text-muted" %>
-      <% User.find(current_user.id).groups.each do |group| %>
-        <div class="form-check">
-          <%= check_box_tag 'group_id[]', group.id, false, class: "form-check-input", id: "group_#{group.id}" %>
-          <%= label_tag "group_#{group.id}", group.name, class: "form-check-label text-muted", required: true %>
+
+
+        <div class="m-1">
+          <%= form.label 'Category', class: "form-label text-muted" %>
+
         </div>
-      <% end %>
-    </div>
-  <% end %>
+
 
     <div class="entity-submit">
       <%= form.submit class:"btn_submit_new" %>

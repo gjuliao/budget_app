@@ -29,7 +29,8 @@ class EntitiesController < ApplicationController
       if @entity.save
         @group_entity = GroupEntity.create(group: @group, entity: @entity)
         format.html do
-          redirect_to user_group_entites_path(params[:user_id], params[:group_id], @entity), notice: 'Entity was successfully created.'
+          redirect_to user_group_entites_path(params[:user_id], params[:group_id], @entity),
+                      notice: 'Entity was successfully created.'
         end
         format.json { render :show, status: :created, location: @entity }
       else

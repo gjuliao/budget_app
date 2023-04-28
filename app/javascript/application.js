@@ -5,10 +5,9 @@ import "controllers"
 //= require popper
 //= require bootstrap
 
-const toggleBtn = document.querySelector('.menu-toggle');
-const menu = document.querySelector('.menu');
+const toggleBtn = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
 
 toggleBtn.addEventListener('click', () => {
-  console.log('clicked');
   menu.classList.toggle('active');
 }); 

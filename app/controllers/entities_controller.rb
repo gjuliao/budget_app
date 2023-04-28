@@ -22,7 +22,7 @@ class EntitiesController < ApplicationController
     @entity.user = current_user
 
     if @entity.save
-      redirect_to user_group_path(params[:user_id], params[:group_id])
+      redirect_to user_group_entities_path(params[:user_id], params[:group_id])
     else
       render :new
     end

@@ -122,10 +122,17 @@ body {
   background-color: #eff2f1;
   padding: 2%;
   margin-top: -3%;
+  font-size: 1.4rem;
 }
 
 .entity_card {
   background-color: white;
+  font-size: 1.3rem;
+}
+
+.created-at {
+  font-size: 0.9rem;
+  color: gray;
 }
 
 .new_entity {

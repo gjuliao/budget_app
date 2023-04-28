@@ -1,6 +1,8 @@
 <div id="<%= dom_id group %>">
   <div class="group-card">
     <div class="group">
+      <link rel="preload" href="<%= group.icon %>" as="image">
+      <link rel="preload" href="http://localhost:3000/assets/es-module-shims.min-4ca9b3dd5e434131e3bb4b0c1d7dff3bfd4035672a5086deec6f73979a49be73.js" as="script">
       <img src="<%= group.icon %>" style="width: 15%" />
       <p class="group-p"><%= group.name %></p>
       <% sum = group.entities.sum(&:amount) %>

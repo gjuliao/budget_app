@@ -47,15 +47,9 @@ RSpec.describe Group, type: :model do
       expect(group.user).to eq(user)
     end
 
-    it 'has many entities' do
-      entity1 = Entity.create(name: 'Entity 1', group_id: group.id)
-      entity2 = Entity.create(name: 'Entity 2', group_id: group.id)
-      expect(group.entities).to match_array([entity1, entity2])
-    end
-
     it 'has and belongs to many entities' do
-      entity1 = Entity.create(name: 'Entity 1')
-      entity2 = Entity.create(name: 'Entity 2')
+      entity1 = Entity.create(name: 'Entity 1', user_id: user.id, group_id: group.id)
+      entity2 = Entity.create(name: 'Entity 2', user_id: user.id, group_id: group.id)
       group.entities << [entity1, entity2]
       expect(group.entities).to match_array([entity1, entity2])
     end

@@ -50,6 +50,8 @@
 ### Key Features <a name="key-features"></a>
   
   #### [Check out the live demo](https://budget-app-be7x.onrender.com)
+
+  ### [Check out loom video presentation](https://www.loom.com/share/4257d37033034b8f8e4189b9b74f3cc5)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->

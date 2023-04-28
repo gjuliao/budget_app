@@ -3,7 +3,7 @@ class EntitiesController < ApplicationController
   before_action :set_entity, only: [:show, :edit, :update, :destroy]
 
   def index
-    @entities = @group.entities.where(user_id: current_user.id)
+    @entities = @group.entities.where(user_id: current_user.id).order(created_at: :desc)
     @entities_sum = @entities.sum(:amount)
   end
 

@@ -19,6 +19,7 @@
 body {
   background-color: #eff2f1;
   font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
 }
 
 /* categories */
@@ -58,8 +59,27 @@ body {
   margin-top: -3%;
 }
 
+.group-card {
+  width: 100%;
+  margin-top: 2%;
+  padding-bottom: 2%;
+  text-decoration: none !important;
+}
+
 .group {
   background-color: white;
+  font-size: 1.3rem;
+  display: flex;
+  padding: 4%;
+  justify-content: space-between;
+}
+
+.group-card p {
+  text-decoration: none;
+}
+
+.group-p {
+  padding-top: 2%;
 }
 
 .btn-category {

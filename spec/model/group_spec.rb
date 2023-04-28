@@ -22,12 +22,48 @@ RSpec.describe Group, type: :model do
     expect(group).to_not be_valid
   end
 
-  describe 'user association' do
-    let(:author) { User.create(name: 'Jerry Seinfield', email: 'test@gmail.com', password: 'test@12345') }
-    let(:group) { Group.create(user_id: author.id, name: 'Travel', icon: 'bi bi-airplane') }
+  it 'is invalid with a name shorter than 3 characters' do
+    group.name = 'Hi'
+    expect(group).not_to be_valid
+  end
 
+  it 'is invalid with a name longer than 50 characters' do
+    group.name = 'a' * 51
+    expect(group).not_to be_valid
+  end
+
+  it 'is invalid with an icon shorter than 3 characters' do
+    group.icon = 'a' * 2
+    expect(group).not_to be_valid
+  end
+
+  it 'is invalid with an icon longer than 150 characters' do
+    group.icon = 'a' * 151
+    expect(group).not_to be_valid
+  end
+
+  describe 'associations' do
     it 'belongs to a user' do
-      expect(group.user).to eq(author)
+      expect(group.user).to eq(user)
+    end
+
+    it 'has and belongs to many entities' do
+      entity1 = Entity.create(name: 'Entity 1', user_id: user.id, group_id: group.id)
+      entity2 = Entity.create(name: 'Entity 2', user_id: user.id, group_id: group.id)
+      group.entities << [entity1, entity2]
+      expect(group.entities).to match_array([entity1, entity2])
+    end
+  end
+
+  describe '#sum_numbers' do
+    it 'returns the sum of an array of numbers' do
+      numbers = [1, 2, 3, 4, 5]
+      expect(group.sum_numbers(numbers)).to eq(15)
+    end
+
+    it 'returns 0 if the array is empty' do
+      numbers = []
+      expect(group.sum_numbers(numbers)).to eq(0)
     end
   end
 end
